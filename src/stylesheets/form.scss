@@ -1,0 +1,121 @@
+#forms {
+  position: relative;
+  left: 50%;
+  margin-left: -15vw;
+  margin-top: 12vh;
+  width: 30vw;
+  height: 80vh;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 10px;
+  border-radius: 5px;
+  .head {
+    text-align: left;
+    padding: 15px;
+    img {
+      height: 15px;
+    }
+  }
+  .error {
+    display: block;
+    width: 90%;
+    padding-top: 5px;
+    height: 24px;
+    font-size: 0.9em;
+    padding-left: 20px;
+    background: rgb(220, 10, 20);
+    color: #fff;
+  }
+  .form-inputs {
+    display: flex;
+    position: relative;
+    width: 22vw;
+    margin-top: 10px;
+    left: 50%;
+    margin-left: -11vw;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+    input {
+      display: block;
+      width: 20vw;
+      height: 30px;
+      margin-top: 5px;
+      outline: none;
+      border: none;
+
+      padding: 0 10px;
+      font-family: Raleway;
+      background: rgb(230, 230, 230);
+      box-sizing: border-box;
+      transition: border 0.5s;
+    }
+    input:hover,
+    input:focus {
+      border: 2px solid rgb(0, 0, 0);
+    }
+  }
+  .sub-btn {
+    width: 22vw;
+    position: relative;
+    left: 50%;
+    margin-top: 5vh;
+    margin-left: -11vw;
+    display: flex;
+    flex-direction: row;
+    button {
+      background: #000;
+      border: none;
+      width: 60px;
+      height: 30px;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.5s;
+    }
+    button:hover {
+      background: rgb(66, 26, 243);
+    }
+    p {
+      display: inline-block;
+      width: 50px;
+      height: 30px;
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+  }
+  p {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #forms {
+    left: 0;
+    margin-left: 0;
+    width: 100vw;
+    border: none;
+    margin-top: 1vh;
+    .head {
+      padding: 30px;
+    }
+    .form-inputs {
+      left: 50%;
+      width: 71vw;
+      margin-left: -35vw;
+      input {
+        width: 70vw;
+      }
+    }
+    .sub-btn {
+      left: 0;
+      margin-left: 80px;
+      width: 70vw;
+    }
+  }
+}

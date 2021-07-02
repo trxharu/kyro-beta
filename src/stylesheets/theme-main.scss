@@ -1,0 +1,133 @@
+#header-home {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  flex-direction: row;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(210, 210, 210);
+  box-sizing: border-box;
+  padding: 10px;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  .left-nav {
+    display: none;
+  }
+  .main-logo {
+    img {
+      cursor: pointer;
+      height: 25px;
+    }
+  }
+  .search {
+    width: 45vw;
+    input[type="text"] {
+      width: 40vw;
+      height: 30px;
+      border: none;
+      outline: none;
+      padding-left: 10px;
+      background: rgb(230, 230, 230);
+      font-family: Raleway;
+    }
+  }
+  .search::after {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    display: block;
+    position: absolute;
+    top: 20px;
+    margin-left: calc(40vw - 14px);
+    content: "";
+    cursor: pointer;
+    background: url("../assets/icons/search.svg") no-repeat 0 0;
+    background-size: 80%;
+  }
+  .right-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      display: inline;
+      border: 2px solid rgb(100, 100, 100);
+      padding: 1px;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: border-color 500ms;
+    }
+    img:hover {
+      border: 2px solid rgb(10, 10, 10);
+    }
+    .search-m {
+      display: none;
+    }
+    .user-text {
+      display: block;
+      width: 100px;
+      padding-left: 10px;
+      h4 {
+        padding-bottom: 2px;
+        opacity: 0.8;
+        transition: opacity 500ms;
+        cursor: pointer;
+      }
+      h4:hover {
+        opacity: 1;
+      }
+      button {
+        border: 1px solid black;
+        display: block;
+        padding: 1px 5px;
+        background: none;
+        cursor: pointer;
+        font-size: 0.7em;
+        transition: background 500ms;
+      }
+      button:hover {
+        color: #fff;
+        background: rgb(230, 10, 10);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  #header-home {
+    height: 50px;
+    padding: 5px 5vw;
+    .left-nav {
+      display: block;
+      width: 28px;
+      button {
+        width: 18px;
+        height: 18px;
+        border: none;
+        background: url("../assets/icons/3opt.svg") no-repeat 0 0;
+      }
+    }
+    .main-logo {
+      img {
+        height: 20px;
+      }
+    }
+    .search {
+      display: none;
+    }
+    .right-nav {
+      .search-m {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background: url("../assets/icons/search.svg");
+        border: none;
+      }
+      .user-text {
+        display: none;
+      }
+    }
+  }
+}
